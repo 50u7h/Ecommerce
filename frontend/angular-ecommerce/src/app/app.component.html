@@ -14,16 +14,22 @@
       <nav class="navbar-sidebar">
         <ul class="list-unstyled navbar-list">
           <li>
-            <a href="#">Books</a>
+            <a routerLink="/category/1" routerlinkactive="active-link">Books</a>
           </li>
           <li>
-            <a href="#">Coffee Mugs</a>
+            <a routerLink="/category/2" routerlinkactive="active-link"
+              >Coffee Mugs</a
+            >
           </li>
           <li>
-            <a href="#">Mouse Pads</a>
+            <a routerLink="/category/3" routerlinkactive="active-link"
+              >Mouse Pads</a
+            >
           </li>
           <li>
-            <a href="#">Luggage Tags</a>
+            <a routerLink="/category/4" routerlinkactive="active-link"
+              >Luggage Tags</a
+            >
           </li>
         </ul>
       </nav>
@@ -60,7 +66,7 @@
     <!-- END HEADER DESKTOP-->
 
     <!-- MAIN CONTENT-->
-    <app-product-list></app-product-list>
+    <router-outlet></router-outlet>
   </div>
 </div>
 
