@@ -1,5 +1,5 @@
 <table class="table">
-  <thead class="table-dark">
+  <thead class="thead-dark">
     <tr>
       <th></th>
       <th>Name</th>
@@ -15,7 +15,7 @@
       </td>
       <td class="align-middle">{{ tempProduct.name }}</td>
       <td class="align-middle">
-        {{ tempProduct.unitPrice | currency : "TRY" }}
+        {{ tempProduct.unitPrice | currency : "USD" }}
       </td>
       <td class="align-middle">{{ tempProduct.unitsInStock }}</td>
     </tr>
