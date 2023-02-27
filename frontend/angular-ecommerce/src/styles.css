@@ -569,6 +569,7 @@ input.au-input.au-input-xl {
   font-weight: 600;
   padding-top: 12px;
   margin-bottom: 7px;
+  text-decoration: none;
 }
 .product-box h2 {
   font-size: 15px;
@@ -741,6 +742,11 @@ table.table.table-bordered th {
 .detail-section {
   margin-top: 60px;
 }
+
+.detail-img {
+  width: 30%;
+}
+
 /**/
 
 /* 
@@ -772,6 +778,10 @@ a.primary-btn:hover {
 
 .active-link {
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* 
