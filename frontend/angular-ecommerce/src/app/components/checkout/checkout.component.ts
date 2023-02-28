@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Country } from 'src/app/common/country';
+import { State } from 'src/app/common/state';
 import { GCommerceFormService } from 'src/app/services/g-commerce-form.service';
 
 @Component({
@@ -124,7 +126,6 @@ export class CheckoutComponent implements OnInit {
     );
 
     // if the current year equals the selected year, then start with the current month
-
     let startMonth: number;
 
     if (currentYear === selectedYear) {
@@ -144,8 +145,8 @@ export class CheckoutComponent implements OnInit {
   getStates(formGroupName: string) {
     const formGroup = this.checkoutFormGroup.get(formGroupName);
 
-    const countryCode = formGroup.value.country.code;
-    const countryName = formGroup.value.country.name;
+    const countryCode = formGroup?.value.country.code;
+    const countryName = formGroup?.value.country.name;
 
     console.log(`${formGroupName} country code: ${countryCode}`);
     console.log(`${formGroupName} country name: ${countryName}`);
@@ -158,7 +159,7 @@ export class CheckoutComponent implements OnInit {
       }
 
       // select first item by default
-      formGroup.get('state').setValue(data[0]);
+      formGroup?.get('state')?.setValue(data[0]);
     });
   }
 }
