@@ -17,8 +17,8 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     private CustomerRepository customerRepository;
 
-    public CheckoutServiceImpl(CustomerRepository theCustomerRepository) {
-        this.customerRepository = theCustomerRepository;
+    public CheckoutServiceImpl(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
     }
 
     @Override
@@ -44,11 +44,11 @@ public class CheckoutServiceImpl implements CheckoutService {
         Customer customer = purchase.getCustomer();
         customer.add(order);
 
-        // save to database
+        // save to the database
         customerRepository.save(customer);
 
         // return a response
-        return  new PurchaseResponse(orderTrackingNumber);
+        return new PurchaseResponse(orderTrackingNumber);
     }
 
     private String generateOrderTrackingNumber() {

@@ -4,7 +4,6 @@ import com.guney.ecommerce.entity.Country;
 import com.guney.ecommerce.entity.Product;
 import com.guney.ecommerce.entity.ProductCategory;
 import com.guney.ecommerce.entity.State;
-import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +27,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         entityManager = theEntityManager;
     }
 
+
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
 
@@ -41,9 +41,6 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         // call an internal helper method
         exposeIds(config);
-
-        // configure cors mapping
-        cors.addMapping("/api/**").allowedOrigins("http://localhost:4200");
     }
 
     private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] theUnsupportedActions) {
@@ -56,6 +53,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
     private void exposeIds(RepositoryRestConfiguration config) {
 
         // expose entity ids
+        //
 
         // - get a list of all entity classes from the entity manager
         Set<EntityType<?>> entities = entityManager.getMetamodel().getEntities();
