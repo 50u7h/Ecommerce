@@ -20,7 +20,12 @@
               "detect-node",
               "tiny-emitter",
               "p-cancelable",
-              "cross-fetch"
+              "cross-fetch",
+              "clipboard",
+              "jquery",
+              "@sindresorhus/to-milliseconds",
+              "parse-ms",
+              "q"
             ],
             "outputPath": "dist/angular-ecommerce",
             "index": "src/index.html",
