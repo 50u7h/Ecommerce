@@ -1,9 +1,6 @@
 package com.guney.ecommerce.config;
 
-import com.guney.ecommerce.entity.Country;
-import com.guney.ecommerce.entity.Product;
-import com.guney.ecommerce.entity.ProductCategory;
-import com.guney.ecommerce.entity.State;
+import com.guney.ecommerce.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.metamodel.EntityType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +38,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         // call an internal helper method
         exposeIds(config);
