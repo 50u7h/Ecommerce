@@ -1,1 +1,5 @@
 frontend/angular-ecommerce/src/app/config/my-app-config.ts
+backend/spring-boot-ecommerce/src/main/resources/gCommerce-keystore.p12
+frontend/angular-ecommerce/ssl-localhost/localhost.key
+frontend/angular-ecommerce/ssl-localhost/localhost.crt
+frontend/angular-ecommerce/localhost.conf
